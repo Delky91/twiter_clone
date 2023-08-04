@@ -16,9 +16,10 @@
     <%= form.text_field :username %>
   </div>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description %>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: 'description-field' %>
+    <span id="char-count">500</span> caracteres restantes
   </div>
 
   <div>

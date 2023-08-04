@@ -2,6 +2,15 @@
 
 <h1>Tweets</h1>
 
+<%= form_tag tweets_path, method: :get do %>
+  <%= text_field_tag :query, params[:query], placeholder: "Search by username or id" %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+<!--create new tweet -->
+<%= render "form", tweet: @tweet %>
+
+<!-- Show all tweets -->
 <div id="tweets">
   <% @tweets.each do |tweet| %>
     <%= render tweet %>
@@ -11,4 +20,3 @@
   <% end %>
 </div>
 
-<%= link_to "New tweet", new_tweet_path %>

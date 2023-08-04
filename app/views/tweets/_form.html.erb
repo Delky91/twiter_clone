@@ -12,17 +12,18 @@
   <% end %>
 
   <div>
+    <!-- valido tanto en front como en modelo -->
     <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username %>
+    <%= form.text_field :username, required: true, minlength: 6 %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: 'description-field' %>
-    <span id="char-count">500</span> caracteres restantes
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description, id: 'description-field', style: "display: block", maxlength: 500,placeholder: "Enter your tweet here...", required:true %>
+    <span id="char-count">500</span>
   </div>
 
   <div>
-    <%= form.submit %>
+    <%= form.submit "Post" %>
   </div>
 <% end %>

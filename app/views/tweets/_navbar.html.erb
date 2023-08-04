@@ -1,0 +1,19 @@
+<aside class="">
+  <div class="mt-4 logo">
+    <%= link_to root_path do %>
+      <i class="fa-brands fa-x-twitter fs-1 text-white"></i>
+    <% end %>
+  </div>
+  <nav class="navbar d-flex gap-4 flex-column">
+    <!-- Home -->
+    <%= link_to root_path, class: "nav-link nav-item ms-md-1" do%>
+      <i class="fa-solid fa-house nav-icon"></i>
+      <p class="d-none d-md-inline ms-1 ms-lg-3 fs-4">Home</p>
+    <% end %>
+    <!-- New tweet -->
+    <%= link_to new_tweet_path, class: "nav-link nav-item ms-md-1" do%>
+      <i class="fa-solid fa-hashtag nav-icon ms-0 ms-sm-1"></i>
+      <p class="d-none d-md-inline ms-1 ms-lg-3 fs-4">New Post</p>
+    <% end %>
+  </nav>
+</aside>

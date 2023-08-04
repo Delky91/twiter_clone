@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	scroll-behavior: smooth;
+}
+
+aside {
+	position: sticky;
+	top: 25px;
+	left: 0;
+}
+nav {
+	margin-top: 30px;
+}
+nav .nav-icon {
+	font-size: 30px;
+}
+
+@media (max-width: 720px) {
+	.navbar {
+		align-items: center;
+	}
+	.logo {
+		text-align: center;
+	}
+}
+@media (min-width: 720px) {
+	.navbar {
+		align-items: start;
+	}
+}

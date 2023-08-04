@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
     if params[:query].present?
       @tweets = Tweet.search_full_text(params[:query])
     else
-      @tweets = Tweet.order(created_at: :desc)
+      @pagy, @tweets = pagy(Tweet.order(created_at: :desc))
     end
 
     @tweet = Tweet.new

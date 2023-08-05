@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   # GET /tweets or /tweets.json
   def index
     # Si estamos haciendo una busqueda solo mostrara los resultados sino mostrara todos los tweets del más nuevo al más viejo
-    @pagy, @tweets = params[:query].present? ? pagy(Tweet.search_full_text(params[:query])) : pagy(Tweet.order(created_at: :desc))
+    @pagy, @tweets = params[:query].present? ? pagy(Tweet.search_full_text(params[:query])) : pagy(Tweet.order(updated_at: :desc))
 
     # necesario para poder hacer uso del crear tweet en el index
     @tweet = Tweet.new

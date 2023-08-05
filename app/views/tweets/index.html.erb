@@ -1,24 +1,17 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Tweets</h1>
-
-<%= form_tag tweets_path, method: :get do %>
-  <%= text_field_tag :query, params[:query], placeholder: "Search by username or id" %>
-  <%= submit_tag "Search" %>
-<% end %>
-
-<!--create new tweet -->
-<%= render "form", tweet: @tweet %>
-
-<!-- Show all tweets -->
-<div id="tweets">
-  <% @tweets.each do |tweet| %>
-    <%= render tweet %>
-    <p>
-      <%= link_to "Show this tweet", tweet %>
-    </p>
-  <% end %>
-  
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <!--Header -->
+  <%= render 'header' %>
+  <!--create new tweet -->
+  <%= render "form", tweet: @tweet %>
+  <!-- Show all tweets -->
+  <div id="tweets">
+    <% @tweets.each do |tweet| %>
+      <%= render tweet %>
+      <p>
+        <%= link_to "Show this tweet", tweet %>
+      </p>
+    <% end %>
+  </div>
+  <%== pagy_nav(@pagy) %>
 </div>
-
-<%== pagy_nav(@pagy) %>

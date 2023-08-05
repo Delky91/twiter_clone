@@ -22,6 +22,7 @@ body {
 	scroll-behavior: smooth;
 }
 
+/* NAVBAR CSS */
 aside {
 	position: sticky;
 	top: 25px;
@@ -46,4 +47,19 @@ nav .nav-icon {
 	.navbar {
 		align-items: start;
 	}
+}
+
+/* Search Bar CSS */
+.search-wrapper {
+	background-color: #202327;
+	overflow: hidden;
+}
+
+.search-wrapper #query {
+	background-color: #202327;
+	box-shadow: none;
+	border: none;
+}
+.search-wrapper #query:focus {
+	outline: none;
 }

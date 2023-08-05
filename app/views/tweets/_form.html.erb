@@ -19,19 +19,22 @@
     </div>
     <div class="col-11">
 
+      <!--Username -->
       <div class="mb-2 d-flex flex-column">
-        <!-- validate in front -->
         <%= form.label :username %>
         <%= form.text_field :username, class:"w-100 tweet-area",placeholder: "insert your name here", required: true, minlength: 2 %>
       </div>
 
+      <!--Tweet-->
       <div class="mb-3 d-flex flex-column">
         <%= form.label :description, "What is happening?!" %>
-        <%= form.text_area :description, class: "w-100 tweet-body", maxlength: 500, rows: 4 ,placeholder: "Tell us here", required:true %>
-        <span id="char-count", class="fw-light opacity-50">500 Characters left</span>
+        <%= form.text_area :description,id: "tweet-body", class: "w-100", maxlength: 500, rows: 4 ,placeholder: "Tell us here", required:true %>
+        <span id="char-count", class="fw-light opacity-50 text-end">500 Characters left</span>
       </div>
+
+      <!-- Post Button -->
       <span class="d-flex justify-content-end">
-        <%= form.submit "Post", class: "btn btn-sm btn-primary px-3 py-1 rounded-4 mb-3", id: "Post" %>
+        <%= form.submit "Post", class: "btn btn-sm btn-primary px-3 px-md-4 py-1 rounded-4 mb-3 fw-bold", id: "Post" %>
       </span>
 
     </div>

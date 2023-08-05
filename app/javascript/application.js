@@ -4,7 +4,7 @@ import "controllers";
 
 //contador de caracteres restantes
 document.addEventListener("DOMContentLoaded", () => {
-	const descriptionField = document.getElementById("description-field");
+	const descriptionField = document.getElementById("tweet-body");
 	const charCountElement = document.getElementById("char-count");
 
 	descriptionField.addEventListener("input", () => {

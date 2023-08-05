@@ -28,9 +28,11 @@ aside {
 	top: 25px;
 	left: 0;
 }
+
 nav {
 	margin-top: 30px;
 }
+
 nav .nav-icon {
 	font-size: 20px;
 }
@@ -50,6 +52,7 @@ nav .nav-icon {
 }
 
 /* Search Bar CSS */
+
 .search-wrapper {
 	background-color: #202327;
 	overflow: hidden;
@@ -60,12 +63,14 @@ nav .nav-icon {
 	box-shadow: none;
 	border: none;
 	margin-left: 10px;
+	color: white;
 }
+
 #query:focus {
 	outline: none;
 	color: white;
 }
 
-.search-icon {
+label .search-icon {
 	color: #595a5c;
 }

@@ -89,7 +89,7 @@ label .search-icon {
 #tweet-body {
 	background-color: rgb(24, 24, 24);
 	border-radius: 10px;
-	border: 1px solid hsla(0, 0%, 100%, 0.1);
+	border: none;
 	padding-left: 10px;
 	color: white;
 }

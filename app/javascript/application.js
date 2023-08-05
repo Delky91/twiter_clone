@@ -5,11 +5,11 @@ import "controllers";
 //contador de caracteres restantes
 document.addEventListener("DOMContentLoaded", () => {
 	const descriptionField = document.getElementById("tweet-body");
-	const charCountElement = document.getElementById("char-count");
+	const charCount = document.getElementById("char-count");
 
 	descriptionField.addEventListener("input", () => {
 		const remainingChars = 500 - descriptionField.value.length;
 		const text = " Characters left";
-		charCountElement.innerText = remainingChars + text;
+		charCount.innerText = remainingChars + text;
 	});
 });

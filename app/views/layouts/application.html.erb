@@ -19,14 +19,22 @@
   <body class="bg-black text-white">
     <main class="container">
       <div class="row g-0 pe-2">
+
+        <!--este span es solo para usar espacion en la pantalla -->
         <span class="col-lg-2 d-none d-lg-block"></span>
+
+        <!--contenedor del navbar -->
         <div class="col-2 col-md-3 col-lg-2 border-end border-white border-opacity-25">
           <%= render 'navbar' %>
         </div>
+
+        <!--Contenedor de main del sitio -->
         <div class="col col-md-7 col-lg-4" id="yield-container">
           <%= yield %>
         </div>
-        <div class="col-lg-4"></div>
+
+        <!-- espacio reservado para feeds u otras caracteristicas a futuro -->
+        <span class="col-lg-4"></span>
       </div>
     </main>
     <!-- Bootstraps -->

@@ -1,17 +1,43 @@
-<div class="container">
+<!--Header -->
+<header class="bg-black">
+  <div class="container">
+    <%= render 'header' %>
+  </div>
+  <hr>
+</header>
+
+<!-- Main -->
+<div type="main" class="container">
+  <!--mensage if the tweet was created or not -->
   <p style="color: green"><%= notice %></p>
-  <!--Header -->
-  <%= render 'header' %>
   <!--create new tweet -->
   <%= render "form", tweet: @tweet %>
+  <hr>
   <!-- Show all tweets -->
-  <div id="tweets">
+  <div id="tweets" class="container">
     <% @tweets.each do |tweet| %>
       <%= render tweet %>
-      <p>
-        <%= link_to "Show this tweet", tweet %>
-      </p>
+
+      <!-- edit, delete  tweets, links -->
+      <div class="d-flex flex-row gap-3 justify-content-end">
+
+        <!--Edit-->
+        <%= link_to tweet, class: "d-flex flex-row align-items-center gap-1 text-decoration-none" do %>
+          <i class="fa-solid fa-pen"></i>
+          <p class="mb-0 d-none d-md-block">Edit</p>
+        <% end %>
+
+        <!--Delete-->
+        <%= link_to tweet, class: "d-flex flex-row align-items-center gap-1 text-decoration-none" do %>
+          <i class="fa-solid fa-trash"></i>
+          <p class="mb-0 d-none d-md-block">Delete</p>
+        <% end %>
+
+      </div>
+      <hr>
     <% end %>
   </div>
+
+  <!--Pagination-->
   <%== pagy_nav(@pagy) %>
 </div>

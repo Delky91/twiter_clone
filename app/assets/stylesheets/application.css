@@ -26,6 +26,20 @@ body {
 	border-right: solid 1px hsla(0, 0%, 100%, 0.3);
 }
 
+header {
+	margin-top: 0;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	padding-top: 0.5rem;
+}
+
+header h1 a {
+	color: white;
+}
+header h1 a:hover {
+	color: #0b5ed7;
+}
 /* NAVBAR CSS */
 aside {
 	position: sticky;
@@ -34,15 +48,15 @@ aside {
 	height: 100vh;
 }
 
-nav {
+aside nav {
 	margin-top: 30px;
 }
 
-nav .nav-icon {
+aside nav .nav-icon {
 	font-size: 20px;
 }
 
-nav a:hover {
+aside nav a:hover {
 	background-color: hsla(0, 0, 100, 0.1);
 }
 
@@ -99,9 +113,19 @@ label .search-icon {
 	outline: 1px solid #0b5ed7;
 }
 
+/* tweets main */
+
+#tweets a {
+	font-size: 0.8rem;
+	color: hsla(0, 0%, 100%, 0.5);
+}
+
+#tweets a:hover {
+	color: #0b5ed7;
+}
 /* Media querys */
 @media (max-width: 720px) {
-	.navbar {
+	aside .navbar {
 		align-items: center;
 	}
 	.logo {

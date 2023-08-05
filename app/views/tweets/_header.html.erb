@@ -1,15 +1,19 @@
-<header class="d-flex align-items-center sticky-top bg-black pb-3 border-bottom border-opacity-50 border-white mt-2 row">
-
-  <h1 class="col-6">Tweets</h1>
-
-  <%= form_tag tweets_path, class:"col-6", autocomplete: "off", method: :get do %>
-    <div class="search-wrapper rounded-5 px-2 py-1 d-flex flex-row">
-      <%= label_tag :query do %>
-        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+<section class="mt-2 row bg-black">
+  <div class="row align-items-center">
+    <h1 class="col-6">
+      <%= link_to root_path, class: "text-decoration-none"  do%>
+        Tweets  
       <% end %>
-      <%= text_field_tag :query, params[:query], placeholder: "Search", id: "query", class: "w-100" %>
-    </div>
-    <%= submit_tag "", class: "search-btn d-none", data: { disable_with: "search" } %>
-  <% end %>
+    </h1>
 
-</header>
+    <%= form_tag tweets_path, class:"col-6", autocomplete: "off", method: :get do %>
+      <div class="search-wrapper rounded-5 px-2 py-1 d-flex flex-row">
+        <%= label_tag :query do %>
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <% end %>
+        <%= text_field_tag :query, params[:query], placeholder: "Search", id: "query", class: "w-100" %>
+      </div>
+      <%= submit_tag "", class: "search-btn d-none", data: { disable_with: "search" } %>
+    <% end %>
+  </div>
+</section>

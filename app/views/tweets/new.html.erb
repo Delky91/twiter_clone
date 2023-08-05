@@ -1,4 +1,4 @@
-<div class="border-bottom border-opacity-25 border-white px-3 g-0">
+<div class="px-3 g-0">
   <h3>New tweet</h3>
   <% if @tweet.errors.any? %>
     <div id="error_explanation">
@@ -11,9 +11,10 @@
     </div>
   <% end %>
   <%= render "form", tweet: @tweet %>
-  <%= link_to tweets_path, class: "back-link" do %>
+  <%= link_to tweets_path, class: "back-link ps-3" do %>
     <i class="fa-solid fa-arrow-left"></i>
     Back
   <% end %>
+  <hr>
 
 </div>

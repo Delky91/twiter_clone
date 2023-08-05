@@ -32,7 +32,7 @@ nav {
 	margin-top: 30px;
 }
 nav .nav-icon {
-	font-size: 30px;
+	font-size: 20px;
 }
 
 @media (max-width: 720px) {
@@ -59,7 +59,13 @@ nav .nav-icon {
 	background-color: #202327;
 	box-shadow: none;
 	border: none;
+	margin-left: 10px;
 }
-.search-wrapper #query:focus {
+#query:focus {
 	outline: none;
+	color: white;
+}
+
+.search-icon {
+	color: #595a5c;
 }

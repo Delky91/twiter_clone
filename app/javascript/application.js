@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	descriptionField.addEventListener("input", () => {
 		const remainingChars = 500 - descriptionField.value.length;
-		charCountElement.innerText = remainingChars;
+		const text = " Characters left";
+		charCountElement.innerText = remainingChars + text;
 	});
 });

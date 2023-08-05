@@ -30,7 +30,7 @@ class TweetsController < ApplicationController
     respond_to do |format|
       if @tweet.save
         format.html { redirect_to tweets_path, notice: "Tweet was successfully created." }
-        format.json { render :show, status: :created, location: @tweet }
+        format.json { render :show, status: :created, location: @tweet } 
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @tweet.errors, status: :unprocessable_entity }

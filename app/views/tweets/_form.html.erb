@@ -1,4 +1,5 @@
 <%= form_with(model: tweet) do |form| %>
+  <!--Error catch -->
   <% if tweet.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
@@ -9,17 +10,30 @@
       </ul>
     </div>
   <% end %>
-  <div>
-    <!-- valido tanto en front como en modelo -->
-    <%= form.label :username, style: "display: block" %>
-    <%= form.text_field :username, required: true, minlength: 2 %>
-  </div>
-  <div class="field">
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_area :description, id: 'description-field', style: "display: block", maxlength: 500,placeholder: "Enter your tweet here...", required:true %>
-    <span id="char-count">500</span>
-  </div>
-  <div>
-    <%= form.submit "Post" %>
+
+  <!--New tweet form -->
+  <div class="row my-3 ">
+
+    <div class="col-1">
+      <i class="fa-solid fa-user"></i>
+    </div>
+    <div class="col-11">
+
+      <div class="mb-2 d-flex flex-column">
+        <!-- validate in front -->
+        <%= form.label :username %>
+        <%= form.text_field :username, class:"w-100 tweet-area",placeholder: "insert your name here", required: true, minlength: 2 %>
+      </div>
+
+      <div class="mb-3 d-flex flex-column">
+        <%= form.label :description, "What is happening?!" %>
+        <%= form.text_area :description, class: "w-100 tweet-body", maxlength: 500, rows: 4 ,placeholder: "Tell us here", required:true %>
+        <span id="char-count", class="fw-light opacity-50">500 Characters left</span>
+      </div>
+      <span class="d-flex justify-content-end">
+        <%= form.submit "Post", class: "btn btn-sm btn-primary px-3 py-1 rounded-4 mb-3", id: "Post" %>
+      </span>
+
+    </div>
   </div>
 <% end %>

@@ -22,11 +22,16 @@ body {
 	scroll-behavior: smooth;
 }
 
+#yield-container {
+	border-right: solid 1px hsla(0, 0%, 100%, 0.3);
+}
+
 /* NAVBAR CSS */
 aside {
 	position: sticky;
 	top: 25px;
 	left: 0;
+	height: 100vh;
 }
 
 nav {
@@ -35,20 +40,6 @@ nav {
 
 nav .nav-icon {
 	font-size: 20px;
-}
-
-@media (max-width: 720px) {
-	.navbar {
-		align-items: center;
-	}
-	.logo {
-		text-align: center;
-	}
-}
-@media (min-width: 720px) {
-	.navbar {
-		align-items: start;
-	}
 }
 
 /* Search Bar CSS */
@@ -73,4 +64,51 @@ nav .nav-icon {
 
 label .search-icon {
 	color: #595a5c;
+}
+
+/* form new tweet */
+
+#char-count {
+	font-size: 0.8rem;
+}
+
+.back-link {
+	text-decoration: none;
+	color: white;
+}
+
+.back-link:hover {
+	color: #0b5ed7;
+}
+
+.tweet-area,
+.tweet-body {
+	background-color: rgb(24, 24, 24);
+	border-radius: 10px;
+	border: 1px solid hsla(0, 0%, 100%, 0.1);
+	padding-left: 10px;
+	color: white;
+}
+
+.tweet-area:focus,
+.tweet-body:focus {
+	outline: 1px solid #0b5ed7;
+}
+
+/* Media querys */
+@media (max-width: 720px) {
+	.navbar {
+		align-items: center;
+	}
+	.logo {
+		text-align: center;
+	}
+	#yield-container {
+		border: none;
+	}
+}
+@media (min-width: 720px) {
+	.navbar {
+		align-items: start;
+	}
 }

@@ -27,9 +27,9 @@
     <div class="mb-3 d-flex flex-column">
       <%= form.label :description, "What is happening?!", class: "mb-2" %>
       <%= form.text_area :description, id: "tweet-body", class: "w-100", maxlength: 500, rows: 5 ,placeholder: "Share somthing", required:true %>
-      <% if params[:action] == "index" %>
-        <span id="char-count", class="fw-light opacity-50 text-end">500 Characters left</span>
-      <% end %>
+
+      <span id="char-count", class="fw-light opacity-50 text-end">500 Characters left</span>
+
     </div>
 
     <!-- Post Button -->

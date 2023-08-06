@@ -36,9 +36,6 @@ header {
 header h1 a {
 	color: white;
 }
-header h1 a:hover {
-	color: #0b5ed7;
-}
 
 /**************************** NAVBAR CSS *****************************/
 aside {
@@ -96,15 +93,6 @@ label .search-icon {
 	font-size: 0.8rem;
 }
 
-.back-link {
-	text-decoration: none;
-	color: white;
-}
-
-.back-link:hover {
-	color: #0b5ed7;
-}
-
 .tweet-area,
 #tweet-body {
 	background-color: rgb(24, 24, 24);
@@ -130,11 +118,7 @@ label .search-icon {
 	color: hsla(0, 0%, 100%, 0.5);
 }
 
-#tweets a:hover {
-	color: #0b5ed7;
-}
-
-#tweets .tweet-content {
+.tweet-content {
 	min-height: 50px;
 	border: 1px solid hsla(0, 0%, 100%, 0.2);
 	background-color: #000;
@@ -157,25 +141,33 @@ label .search-icon {
 	color: white;
 }
 
-#pagy-main .pagy-nav span a:hover {
-	color: #0b5ed7;
-}
-
 #pagy-main .disabled {
 	display: none;
 }
 
 /**************************************Edit tweet **********************************/
 
-#edit-options a {
-	text-decoration: none;
-	color: #fff;
+#delete-show {
+	color: white;
+	background-color: #000;
+	border: none;
 }
 
-#edit-options a:hover {
+#show-tweet a,
+.back-link,
+#edit-options a {
+	color: white;
+	text-decoration: none;
+}
+
+#tweets a:hover,
+header h1 a:hover,
+.back-link:hover,
+#pagy-main .pagy-nav span a:hover,
+#edit-options a:hover,
+#show-tweet a:hover {
 	color: #0b5ed7;
 }
-
 /************************************** Media querys *******************************/
 @media (max-width: 720px) {
 	aside .navbar {

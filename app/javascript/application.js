@@ -3,13 +3,15 @@ import "@hotwired/turbo-rails";
 import "controllers";
 
 //contador de caracteres restantes
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("turbo:load", () => {
 	const descriptionField = document.getElementById("tweet-body");
 	const charCount = document.getElementById("char-count");
 
-	descriptionField.addEventListener("input", () => {
+	function updateCharCount() {
 		const remainingChars = 500 - descriptionField.value.length;
-		const text = " Characters left";
-		charCount.innerText = remainingChars + text;
-	});
+		charCount.innerText = remainingChars + " Characters left";
+	}
+
+	descriptionField.addEventListener("input", updateCharCount);
+	updateCharCount();
 });

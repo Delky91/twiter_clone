@@ -123,6 +123,31 @@ label .search-icon {
 #tweets a:hover {
 	color: #0b5ed7;
 }
+
+/*PAGINATION Pagy */
+
+#pagy-main .pagy-nav {
+	display: flex;
+	gap: 5px;
+	color: #fff;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+#pagy-main .pagy-nav span a {
+	text-decoration: none;
+	color: hsla(0, 0%, 100%, 0.5);
+}
+
+#pagy-main .pagy-nav span a:hover,
+#pagy-main .active {
+	color: #0b5ed7;
+}
+
+#pagy-main .disabled {
+	display: none;
+}
+
 /* Media querys */
 @media (max-width: 720px) {
 	aside .navbar {

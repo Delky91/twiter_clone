@@ -1,10 +1,22 @@
-<h1>Editing tweet</h1>
+<div class="container">
+  <h3>Editing tweet</h3>
 
-<%= render "form", tweet: @tweet %>
+  <%= render "form", tweet: @tweet %>
 
-<br>
+  <div id="edit-options" class="d-flex flex-row gap-4 justify-content-center align-items-center">
+    <!--Back to tweets -->
+    <%= link_to tweets_path, class: "d-flex align-items-center gap-2" do %>
+      <i class="fa-solid fa-arrow-left"></i>
+      Back
+    <% end %>
 
-<div>
-  <%= link_to "Show this tweet", @tweet %> |
-  <%= link_to "Back to tweets", tweets_path %>
+    <span>|</span>
+
+    <!--go to the specefic tweet -->
+    <%= link_to @tweet, class: "d-flex align-items-center gap-2" do%>
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <p class="m-0">options</p>
+    <% end %>
+
+  </div>
 </div>

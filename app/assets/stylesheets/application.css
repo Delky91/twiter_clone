@@ -25,9 +25,8 @@ body {
 #yield-container {
 	border-right: solid 1px hsla(0, 0%, 100%, 0.3);
 }
-
+/******************************** HEADER *************************************/
 header {
-	margin-top: 0;
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -40,7 +39,8 @@ header h1 a {
 header h1 a:hover {
 	color: #0b5ed7;
 }
-/* NAVBAR CSS */
+
+/**************************** NAVBAR CSS *****************************/
 aside {
 	position: sticky;
 	top: 25px;
@@ -55,12 +55,18 @@ aside nav {
 aside nav .nav-icon {
 	font-size: 20px;
 }
-
-aside nav a:hover {
-	background-color: hsla(0, 0, 100, 0.1);
+aside nav a {
+	color: hsla(0, 0%, 100%, 0.7);
+	text-decoration: none;
 }
 
-/* Search Bar CSS */
+aside nav a:hover,
+aside .logo:hover {
+	background-color: hsla(0, 0%, 100%, 0.1);
+	color: hsla(0, 0%, 100%, 1);
+}
+
+/**************************************************** Search Bar CSS ************************/
 
 .search-wrapper {
 	background-color: #202327;
@@ -84,7 +90,7 @@ label .search-icon {
 	color: #595a5c;
 }
 
-/* form new tweet */
+/******************************************** form new tweet ***************************/
 
 #char-count {
 	font-size: 0.8rem;
@@ -113,7 +119,11 @@ label .search-icon {
 	outline: 1px solid #0b5ed7;
 }
 
-/* tweets main */
+/******************************************* Tweets main ******************************/
+#creation-time {
+	font-size: 0.7rem;
+	color: hsla(0, 0%, 100%, 0.4);
+}
 
 #tweets a {
 	font-size: 0.8rem;
@@ -124,11 +134,16 @@ label .search-icon {
 	color: #0b5ed7;
 }
 
-/*PAGINATION Pagy */
+#tweets .tweet-content {
+	min-height: 50px;
+	border: 1px solid hsla(0, 0%, 100%, 0.2);
+	background-color: #000;
+}
+/*******************************************Pagination Pagy **************************/
 
 #pagy-main .pagy-nav {
 	display: flex;
-	gap: 5px;
+	gap: 8px;
 	color: #fff;
 	justify-content: center;
 	margin-bottom: 15px;
@@ -138,9 +153,11 @@ label .search-icon {
 	text-decoration: none;
 	color: hsla(0, 0%, 100%, 0.5);
 }
-
-#pagy-main .pagy-nav span a:hover,
 #pagy-main .active {
+	color: white;
+}
+
+#pagy-main .pagy-nav span a:hover {
 	color: #0b5ed7;
 }
 
@@ -148,13 +165,24 @@ label .search-icon {
 	display: none;
 }
 
-/* Media querys */
+/**************************************Edit tweet **********************************/
+
+#edit-options a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#edit-options a:hover {
+	color: #0b5ed7;
+}
+
+/************************************** Media querys *******************************/
 @media (max-width: 720px) {
 	aside .navbar {
 		align-items: center;
 	}
-	.logo {
-		text-align: center;
+	.logo-container {
+		justify-content: center;
 	}
 	#yield-container {
 		border: none;

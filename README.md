@@ -44,7 +44,7 @@ Estas instrucciones te guiarán para obtener una copia de este proyecto en funci
 Clona el repositorio con el siguiente comando
 
 ```bash
-git clone https://github.com/Delky91/howarts_rails
+git clone https://github.com/Delky91/twiter_clone
 ```
 
 En la terminal accede a la carpeta donde esta el repositorio y ejecuta
@@ -144,7 +144,7 @@ Explica qué tecnologías usaste para construir este proyecto. Aquí algunos eje
 
 ## Soporte
 
-Si tienes algún problema o sugerencia, por favor abre un problema [aquí](https://github.com/your/project/issues).
+Si tienes algún problema o sugerencia, por favor abre un problema [aquí](https://github.com/Delky91/twiter_clone/issues).
 
 ## Roadmap
 
